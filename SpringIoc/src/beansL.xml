@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="MatCheatObjectValue"
+		class="com.dawit.LoosCoupling.MatCheat"></bean>
+	<bean id="ScienceCheatObjectValue"
+		class="com.dawit.LoosCoupling.ScienceCheat"></bean>
+	<bean id="student" class="com.dawit.LoosCoupling.Student">
+		<property name="cheat" ref="MatCheatObjectValue"></property>
+	</bean>
+	
+	<bean id="DataServiceValue" class="com.dawit.LoosCouplingTry.DataService"></bean>
+	<bean id="MissedCallValue" class="com.dawit.LoosCouplingTry.MissedCallService">
+	<property name="str" value="yes"/>
+	</bean>
+	<bean id="telecom" class="com.dawit.LoosCouplingTry.EthioTelecom">
+	<property name="service" ref="MissedCallValue"/>
+	</bean>
+	
+	
+	
+</beans>

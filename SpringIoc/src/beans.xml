@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- 
+	<bean id="sim" class="com.dawit.ioc.etc"></bean>
+
+  -->
+  <bean id="cheatpaper" class="com.dawit.odi.MatCheat"></bean>
+	<bean id="student" class="com.dawit.odi.Student1">
+		<property name="CheatCourse" value="java" />
+		<property name="Cheat" ref="cheatpaper"/>
+			
+	</bean>
+	
+	
+	<bean id="student2" class="com.dawit.odi.Student2">
+	<property name="cheater" ref="cheatpaper"/>
+	
+	</bean>
+	<!--   -->
+</beans>
